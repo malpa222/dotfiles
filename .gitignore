@@ -12,4 +12,4 @@
 !.config/ranger/*
 
 !.config/kitty/
-!.config/kitty/*
+!.config/kitty/**/*
