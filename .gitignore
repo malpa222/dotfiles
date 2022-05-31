@@ -1,0 +1,15 @@
+*
+!.gitignore
+
+# ------------------------------------- ~
+!.vimrc
+!.bashrc
+
+# ------------------------------------- ~/.config
+!.config/
+
+!.config/ranger/
+!.config/ranger/*
+
+!.config/kitty/
+!.config/kitty/*
