@@ -5,8 +5,17 @@
 !.vimrc
 !.bashrc
 
+# ------------------------------------- ~/.local
+!.local/
+!.local/share/
+!.local/share/fonts/*
+
 # ------------------------------------- ~/.config
 !.config/
+
+!.config/nvim/
+!.config/nvim/**/*
+.config/nvim/plugin/
 
 !.config/ranger/
 !.config/ranger/*
