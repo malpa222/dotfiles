@@ -2,13 +2,11 @@
 !.gitignore
 
 # ------------------------------------- ~
-!.vimrc
 !.bashrc
 
 # ------------------------------------- ~/.local
 !.local/
-!.local/share/
-!.local/share/fonts/*
+!.local/**/fonts/*
 
 # ------------------------------------- ~/.config
 !.config/
