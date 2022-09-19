@@ -21,6 +21,8 @@ require('packer').startup(function(use)
 	use { "ellisonleao/gruvbox.nvim" }
 	use 'kyazdani42/nvim-web-devicons'
 
+	use 'folke/tokyonight.nvim'
+
 	-- utils
 	use { 
 		'ms-jpq/chadtree', 
@@ -31,12 +33,17 @@ require('packer').startup(function(use)
 end)
 
 -- load colorscheme
-require('colorscheme')
+vim.cmd[[colorscheme tokyonight-moon]]
 
 -- load plugins
 vim.g.coq_settings = { auto_start = true }
 
-require('lualine').setup()
+require('lualine').setup({
+	options = {
+		theme = 'tokyonight'
+	}
+})
+
 require('toggleterm').setup({
 	open_mapping = [[<c-\>]],
 	direction = 'float',
