@@ -9,31 +9,35 @@ vim.cmd [[
 require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim' -- packer, leave it
 
+	-- lsp
+	use 'neovim/nvim-lspconfig'
+
+	-- coq
+	use { 'ms-jpq/coq_nvim', branch = 'coq' }
+	use { 'ms-jpq/coq.artifacts', branch = 'artifacts' }
+
 	-- looks
 	use 'nvim-lualine/lualine.nvim'
-	use "rafamadriz/neon"
+	use { "ellisonleao/gruvbox.nvim" }
 	use 'kyazdani42/nvim-web-devicons'
 
 	-- utils
-	use 'kyazdani42/nvim-tree.lua'
-	use 'rstacruz/vim-closer'
+	use { 
+		'ms-jpq/chadtree', 
+		branch = 'chad',
+		run = "python3 -m chadtree deps"
+	}
 	use 'akinsho/toggleterm.nvim'
-
-	-- coc
-	use { 'neoclide/coc.nvim', branch = 'release' }
 end)
 
--- set colorscheme
-vim.g.neon_style = 'doom'
-vim.cmd[[colorscheme neon]]
+-- load colorscheme
+require('colorscheme')
 
 -- load plugins
-require('coc-config')
+vim.g.coq_settings = { auto_start = true }
 
-require('nvim-tree').setup()
-require('lualine').setup({
-	options = { theme = 'neon' }
-})
+require('lualine').setup()
 require('toggleterm').setup({
 	open_mapping = [[<c-\>]],
+	direction = 'float',
 })

@@ -5,7 +5,7 @@ local options = {}
 vim.g.mapleader = '\\'
 
 -- nvimtree
-map('n', '<Leader>f', ':NvimTreeToggle<CR>', options)
+map('n', '<Leader>f', ':CHADopen<CR>', options)
 
 --toggleterm
 function _G.set_terminal_keymaps()
